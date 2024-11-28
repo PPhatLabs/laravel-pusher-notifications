@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PusherNoitication;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('push-notification', [PusherNoitication::class, 'sendNotification']);
+
+Route::get('/push', function () {
+    event(new App\Events\StatusLiked('Someone'));
+    return 0;
 });

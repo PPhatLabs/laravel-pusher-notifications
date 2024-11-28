@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\PusherNoitication;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
